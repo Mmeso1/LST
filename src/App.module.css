@@ -1,0 +1,108 @@
+:root {
+  --gray-color: #737373;
+  --fw-400: 400;
+  --fsz-14: 14px;
+  --fsz-20: 20px;
+  --lh-20: 20px;
+  --lh-30: 30px;
+}
+
+/* Featured section */
+.featuredProductsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0rem 0rem;
+}
+
+.featuredProductsSectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0rem 4.5rem 4rem 4.5rem;
+}
+
+.featuredProductsSectionHeader h2 {
+  margin: -0.5rem 0 -0.2rem;
+}
+
+.featuredProductsSectionHeader h4,
+.featuredProductsSectionHeader p {
+  color: var(--gray-color);
+  font-weight: var(--fw-400);
+}
+
+.featuredProductsSectionHeader h4 {
+  font-size: var(--fsz-20);
+  line-height: var(--lh-30);
+  letter-spacing: 0.2px;
+}
+
+.featuredProductsSectionHeader p {
+  font-size: var(--fsz-14);
+  line-height: var(--lh-20);
+  letter-spacing: 0.2px;
+}
+
+.featuredProductsSectionGrid {
+  max-width: 1100px;
+  margin: 0 2rem;
+  padding: 0 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.featuredProductCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-text-color);
+  margin-bottom: 4rem;
+}
+
+.featuredProductCard img {
+  width: 72px;
+  height: 72px;
+}
+
+.featuredProductCard p {
+  flex-wrap: wrap;
+  padding: 0rem 6rem;
+}
+
+@media (min-width: 768px) {
+  .featuredProductsSection {
+    padding: 0rem;
+    margin: 7rem 0rem;
+  }
+
+  .featuredProductsSectionGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .featuredProductCard p {
+    width: 75%;
+  }
+
+  /* .productsSectionGrid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+  
+    .productCard {
+      margin-bottom: 2rem;
+    }
+  
+    .productCard img {
+      width: 100%;
+      height: auto;
+    } */
+}
+
+/* Featured Posts */

@@ -1,0 +1,293 @@
+:root {
+  --blue-color: #23a6f0;
+  --green-color: #23856d;
+  --gray-color: #737373;
+}
+
+.navigation {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Contact Bar - Desktop Only */
+.contactBar {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2.5rem;
+  background-color: var(--green-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.contactInfo,
+.socialLinks,
+.contactBar > div:nth-child(2) {
+  flex: 1;
+}
+
+.contactInfo {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  color: #ffffff;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactBar > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  align-items: center;
+  color: #ffffff;
+}
+
+.socialLinks a {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+/* Main Navigation */
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+}
+
+.navBrand h1 {
+  margin-right: 7rem;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+/* Desktop Navigation Links */
+.desktopNavLinks {
+  display: none;
+  gap: 2rem;
+}
+
+.desktopNavLinks a {
+  color: var(--gray-color);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+.desktopNavLinks a:hover {
+  color: var(--blue-color);
+}
+
+/* Mobile Navigation Actions */
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton img {
+  width: 24px;
+  height: 24px;
+}
+
+.mobileMenuButton {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Mobile Navigation Links */
+.mobileNavLinks {
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.mobileNavLinks.active {
+  display: flex;
+}
+
+.mobileNavLinks a {
+  color: var(--gray-color);
+  text-decoration: none;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0.2px;
+}
+
+.mobileNavLinks a:nth-child(2) {
+  font-weight: 400;
+}
+
+.navCTA {
+  display: none;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.navCTA > div:nth-child(1) {
+  margin-right: 1rem;
+}
+
+.authText,
+.slash {
+  color: var(--blue-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.slash {
+  padding: 0 0.4rem;
+}
+
+.blueText {
+  color: var(--blue-color);
+  padding-left: 0.5rem;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .contactBar {
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    font-size: 14px;
+  }
+  .desktopNavLinks {
+    display: flex;
+  }
+
+  .navActions {
+    display: none;
+  }
+
+  .mobileNavLinks,
+  .mobileNavLinks.active {
+    display: none !important;
+  }
+
+  .iconButton {
+    padding: 0.2rem;
+  }
+
+  .iconButton img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .navCTA {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .navCTA > div:nth-child(1) {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .desktopNavLinks {
+    margin-left: -1rem;
+  }
+}
+
+/* Medium Desktop Styles */
+@media (min-width: 768px) and (max-width: 1304px) {
+  .contactBar > div:nth-child(2) {
+    justify-content: flex-start;
+  }
+
+  .contactInfo {
+    display: none;
+  }
+
+  .contactItem {
+    font-size: 12px;
+    gap: 0.2rem;
+  }
+
+  .socialLinks {
+    gap: 1rem;
+  }
+
+  .mainNav {
+    padding: 1rem 2.5rem;
+  }
+
+  .navBrand h1 {
+    margin-right: 3rem;
+    font-size: 20px;
+  }
+
+  .desktopNavLinks {
+    gap: 1rem;
+  }
+
+  .desktopNavLinks a {
+    font-size: 12px;
+  }
+
+  .navCTA {
+    gap: 0.5rem;
+  }
+
+  .authText,
+  .slash {
+    font-size: 12px;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1305px) {
+  .contactBar {
+    padding: 0.75rem 3%;
+  }
+
+  .mainNav {
+    padding: 0.5rem 3% 3rem;
+  }
+}

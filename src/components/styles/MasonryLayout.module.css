@@ -1,0 +1,140 @@
+.masonryContainer {
+  /* width: 100%; */
+  padding: 1rem 3rem;
+}
+
+.masonryGrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.masonryItem {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.masonryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.itemContent {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  color: #252b42;
+  font-weight: 700;
+}
+
+.itemContent h3 {
+  margin: -0.8rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.itemContent p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.description,
+.readMore {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.description {
+  color: #2dc071;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+}
+
+@media (max-width: 768px) {
+  .masonryGrid {
+    margin-top: 5rem;
+  }
+
+  .rightGrid,
+  .bottomItems {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .masonryGrid {
+    flex-direction: row;
+    gap: 1rem;
+    height: 650px;
+    justify-content: center;
+  }
+
+  .masonryItem {
+    height: 100%;
+  }
+
+  .masonryItem:first-child {
+    flex: 1;
+  }
+
+  .itemContent {
+    top: 0px;
+  }
+
+  .rightGrid {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .bottomItems {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .bottomItems .masonryItem {
+    flex: 1;
+  }
+
+  .masonryGrid > div:first-child .itemContent h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .masonryContainer {
+    /* width: 100%; */
+    padding: 1rem 4rem;
+  }
+
+  .masonryGrid > div:first-child .itemContent .title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonryContainer {
+    /* width: 100%; */
+    padding: 1rem 10rem;
+  }
+
+  .masonryGrid > div:first-child .itemContent .title {
+    font-size: 40px;
+  }
+}
