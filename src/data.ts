@@ -5,6 +5,9 @@ import image4 from "./assets/card-cover-4.svg";
 import reader from "./assets/book-reader.svg";
 import book from "./assets/cool-icon.svg";
 import growth from "./assets/growth.svg";
+import post1 from "./assets/postImg_1.svg";
+import post2 from "./assets/postImg_2.svg";
+import post3 from "./assets/postImg_3.svg";
 
 export const items = [
   {
@@ -52,5 +55,20 @@ export const services = [
     image: growth,
     title: "Hack Growth",
     description: "Overcame any hurdle or any other problem.",
+  },
+];
+
+export const posts = [
+  {
+    id: 1,
+    image: post1,
+  },
+  {
+    id: 2,
+    image: post2,
+  },
+  {
+    id: 3,
+    image: post3,
   },
 ];

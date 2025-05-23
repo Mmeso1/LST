@@ -1,14 +1,24 @@
 :root {
   --gray-color: #737373;
+  --blue-color: #23a6f0;
+  --primary-text-color: #252b42;
+  --danger-color: #e74040;
+  --disabled-element-color: #8ec2f2;
   --fw-400: 400;
+  --fw-700: 700;
+  --fsz-12: 12px;
   --fsz-14: 14px;
   --fsz-20: 20px;
+  --fsz-40: 40px;
   --lh-20: 20px;
+  --lh-24: 24px;
   --lh-30: 30px;
+  --lh-50: 50px;
 }
 
 /* Featured section */
-.featuredProductsSection {
+.featuredProductsSection,
+.featuredPostsSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +26,8 @@
   padding: 10rem 0rem 0rem;
 }
 
-.featuredProductsSectionHeader {
+.featuredProductsSectionHeader,
+.featuredPostsSectionHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +85,131 @@
   padding: 0rem 6rem;
 }
 
+/* Featured Posts */
+.featuredPostsSection {
+  margin-top: 5rem;
+  padding: 0rem;
+}
+
+.featuredPostsSectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.8rem;
+  margin: 0 2rem;
+  padding: 0 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.featuredPostsSectionHeader p {
+  color: var(--blue-color);
+  font-weight: 700;
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+}
+
+.featuredPostsSectionHeader h2 {
+  font-weight: 700;
+  font-size: var(--fsz-40);
+  line-height: var(--lh-50);
+  letter-spacing: 0.2px;
+  margin-top: -0.5rem;
+}
+
+.postCard {
+  box-shadow: 0px 2px 4px 0px #0000001a;
+  width: 100%;
+}
+
+.postCardTop {
+  position: relative;
+}
+
+.postCardTop img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.postCardTop p {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: var(--danger-color);
+  padding: 0px 10px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 4px 0px #0000001a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fsz-14);
+  font-weight: var(--fw-700);
+  line-height: var(--lh-24);
+  color: white;
+}
+
+.postCardBottom {
+  height: 306px;
+  gap: 10px;
+  padding: 25px 25px 35px 25px;
+  font-weight: var(--fw-400);
+}
+
+.postCardBottom h1 {
+  font-weight: var(--fw-400);
+}
+
+.postCardBottom .postCardDescription {
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+  color: var(--gray-color);
+  width: 280px;
+}
+
+.postCardStatus {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: var(--fsz-12);
+}
+
+.postCardStatus > p:first-child {
+  color: var(--disabled-element-color);
+}
+
+.postCardInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fsz-12);
+}
+
+.postCardInfo div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.postCardLearnMore {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.postCardLearnMore p {
+  font-size: var(--fsz-14);
+  color: var(--gray-color);
+  font-weight: var(--fw-700);
+}
+
+.postCardLearnMore img {
+  width: 9px;
+  height: 16px;
+}
+
 @media (min-width: 768px) {
   .featuredProductsSection {
     padding: 0rem;
@@ -83,26 +219,10 @@
   .featuredProductsSectionGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
 
   .featuredProductCard p {
     width: 75%;
   }
-
-  /* .productsSectionGrid {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-  
-    .productCard {
-      margin-bottom: 2rem;
-    }
-  
-    .productCard img {
-      width: 100%;
-      height: auto;
-    } */
 }
-
-/* Featured Posts */

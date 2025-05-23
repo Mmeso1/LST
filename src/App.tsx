@@ -1,9 +1,12 @@
 import styles from "./components/styles/ProductSection.module.css";
-import { items, services } from "./data";
+import { items, services, posts } from "./data";
 import app_styles from "./App.module.css";
 import Navigation from "./components/Navigation";
 import MasonryLayout from "./components/MasonryLayout";
 import ProductCard from "./components/ProductCard";
+import clock from "./assets/clock.svg";
+import picture from "./assets/picture.svg";
+import arrow from "./assets/arrow-next.svg";
 
 function App() {
   return (
@@ -52,32 +55,46 @@ function App() {
         </section>
 
         {/* Featured Posts */}
-        <section>
-          <div>
+        <section className={app_styles.featuredPostsSection}>
+          <div className={app_styles.featuredPostsSectionHeader}>
             <p>Practise Advice</p>
             <h2>Featured Posts</h2>
           </div>
-          <div className={app_styles.featuredPostsSection}>
-            <div className={app_styles.postCard}>
-              <img src="https://via.placeholder.com/300" alt="Post 1" />
-              <h3>Post Title 1</h3>
-              <p>Post description goes here.</p>
-            </div>
-            <div className={app_styles.postCard}>
-              <img src="https://via.placeholder.com/300" alt="Post 2" />
-              <h3>Post Title 2</h3>
-              <p>Post description goes here.</p>
-            </div>
-            <div className={app_styles.postCard}>
-              <img src="https://via.placeholder.com/300" alt="Post 3" />
-              <h3>Post Title 3</h3>
-              <p>Post description goes here.</p>
-            </div>
-            <div className={app_styles.postCard}>
-              <img src="https://via.placeholder.com/300" alt="Post 4" />
-              <h3>Post Title 4</h3>
-              <p>Post description goes here.</p>
-            </div>
+          <div className={app_styles.featuredPostsSectionGrid}>
+            {posts.map((item) => (
+              <div key={item.id} className={app_styles.postCard}>
+                <div className={app_styles.postCardTop}>
+                  <img src={item.image} alt="Post 1" />
+                  <p>NEW</p>
+                </div>
+                <div className={app_styles.postCardBottom}>
+                  <div className={app_styles.postCardStatus}>
+                    <p>Google</p>
+                    <p>Trending</p>
+                    <p>New</p>
+                  </div>
+                  <h1>Loudest à la Madison #1 (L'integral)</h1>
+                  <p className={app_styles.postCardDescription}>
+                    We focus on ergonomics and meeting you where you work. It's
+                    only a keystroke away.
+                  </p>
+                  <div className={app_styles.postCardInfo}>
+                    <div>
+                      <img src={clock} alt="time" />
+                      <p>22 April 2021</p>
+                    </div>
+                    <div>
+                      <img src={picture} alt="comments" />
+                      <p>10 comments</p>
+                    </div>
+                  </div>
+                  <div className={app_styles.postCardLearnMore}>
+                    <p>Learn More</p>
+                    <img src={arrow} alt="arrow" />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
       </main>
