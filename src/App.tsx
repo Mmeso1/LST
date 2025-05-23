@@ -59,6 +59,7 @@ function App() {
           <div className={app_styles.featuredPostsSectionHeader}>
             <p>Practise Advice</p>
             <h2>Featured Posts</h2>
+            <h2>Featured Products</h2>
           </div>
           <div className={app_styles.featuredPostsSectionGrid}>
             {posts.map((item) => (
