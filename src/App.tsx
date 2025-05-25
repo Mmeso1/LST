@@ -9,6 +9,9 @@ import picture from "./assets/picture.svg";
 import arrow from "./assets/arrow-next.svg";
 import user from "./assets/user-pfp.svg";
 import stars from "./assets/stars.svg";
+import fb from "./assets/b-facebook.svg";
+import insta from "./assets/b-instagram.svg";
+import twitter from "./assets/b-twitter.svg";
 
 function App() {
   return (
@@ -156,6 +159,76 @@ function App() {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className={app_styles.footer}>
+        <div className={app_styles.footerTop}>
+          <div className={app_styles.footerContainer}>
+            <div className={app_styles.footerTopContent}>
+              <h3>Bandage</h3>
+              <div className={app_styles.footerSocialIcons}>
+                <img src={fb} alt="facebook icon" />
+                <img src={insta} alt="instagram icon" />
+                <img src={twitter} alt="twitter icon" />
+              </div>
+            </div>
+            <span className={app_styles.footerTopBorder}></span>
+          </div>
+        </div>
+        <div className={app_styles.footerContainer}>
+          <div className={app_styles.footerContent}>
+            <div className={app_styles.footerLinks}>
+              <h5>Company Info</h5>
+              <ul>
+                <li>About Us</li>
+                <li>Carrier</li>
+                <li>We are hiring</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+            <div className={app_styles.footerLinks}>
+              <h5>Legal</h5>
+              <ul>
+                <li>About Us</li>
+                <li>Carrier</li>
+                <li>We are hiring</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+            <div className={app_styles.footerLinks}>
+              <h5>Features</h5>
+              <ul>
+                <li>Business Marketing</li>
+                <li>User Analytic</li>
+                <li>Live Chat</li>
+                <li>Unlimited Support</li>
+              </ul>
+            </div>
+            <div className={app_styles.footerLinks}>
+              <h5>Resources</h5>
+              <ul>
+                <li>IOS & Android</li>
+                <li>Watch a Demo</li>
+                <li>Customers</li>
+                <li>API</li>
+              </ul>
+            </div>
+            <div className={app_styles.footerNewsletter}>
+              <h5>Get In Touch</h5>
+              <div className={app_styles.footerNewsletterForm}>
+                <input type="email" placeholder="Your Email" />
+                <button>Subscribe</button>
+              </div>
+              <p>Lore imp sum dolor Amit</p>
+            </div>
+          </div>
+        </div>
+        <div className={app_styles.footerBottom}>
+          <div className={app_styles.footerContainer}>
+            <p> Made With Love By Finland All Right Reserved </p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

@@ -4,6 +4,13 @@
   font-family: "Montserrat", sans-serif;
 }
 
+/* Global fix for padding/width overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;

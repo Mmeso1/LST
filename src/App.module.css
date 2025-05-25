@@ -8,10 +8,12 @@
   --secondary-text-color: #23856d;
   --danger-color: #e74040;
   --disabled-element-color: #8ec2f2;
+  --light-gray-color: #fafafa;
   --fw-400: 400;
   --fw-700: 700;
   --fsz-12: 12px;
   --fsz-14: 14px;
+  --fsz-16: 16px;
   --fsz-20: 20px;
   --fsz-24: 24px;
   --fsz-40: 40px;
@@ -19,6 +21,7 @@
   --lh-22: 22px;
   --lh-24: 24px;
   --lh-30: 30px;
+  --lh-32: 32px;
   --lh-50: 50px;
 }
 
@@ -51,7 +54,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0 1.5rem 4rem; /* use container for bigger paddings */
+  margin: 0 1.5rem 4rem;
 }
 
 .featuredProductsSectionHeader h2 {
@@ -220,7 +223,7 @@
      About Us (Mobile First)
      =============================================== */
 .aboutUsSection {
-  background-color: #fafafa;
+  background-color: var(--light-gray-color);
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
@@ -327,7 +330,7 @@
   justify-content: center;
   text-align: center;
   padding: 8rem 1.5rem;
-  margin: 5rem auto;
+  margin: 5rem auto 0rem;
   background-image: url("./assets/bg-sub2.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -386,6 +389,161 @@
   line-height: var(--lh-22);
 }
 
+/* Footer */
+.footer {
+  background-color: #fff;
+  width: 100%;
+}
+
+.footerContainer {
+  padding: 0 10%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footerTop {
+  background-color: var(--light-gray-color);
+  width: 100%;
+  padding: 6px 0;
+}
+
+.footerTop .footerTopContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.footerTop .footerContainer {
+  flex-direction: column;
+}
+
+.footerTop h3 {
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-24);
+  line-height: var(--lh-32);
+  letter-spacing: 0.1px;
+}
+
+.footerTopBorder {
+  display: none;
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+  /* margin-top: 1rem;  */
+}
+
+.footerSocialIcons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.footerContent > div {
+  flex: 1 1 180px;
+  min-width: 0;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footerLinks h5,
+.footerNewsletter h5 {
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-16);
+  line-height: var(--lh-24);
+  letter-spacing: 0.1px;
+  margin-bottom: 0px;
+}
+
+.footerNewsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footerNewsletter .footerNewsletterForm {
+  display: flex;
+}
+
+.footerNewsletter input {
+  padding: 15px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px 0px 0px 5px;
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  background-color: #f9f9f9;
+}
+
+.footerNewsletter input::placeholder,
+.footerNewsletter p {
+  color: var(--gray-color);
+  font-size: var(--fsz-14);
+  font-weight: var(--fw-400);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+}
+
+.footerNewsletter button {
+  background-color: var(--blue-color);
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  font-weight: var(--fw-400);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  cursor: pointer;
+}
+
+.footerNewsletter p {
+  font-size: var(--fsz-12);
+  margin-top: -0.5rem;
+}
+
+.footerLinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+.footerLinks ul li {
+  margin: 0.5rem 0;
+  color: var(--gray-color);
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+}
+
+.footerBottom {
+  text-align: center;
+  padding: 0.8rem 0;
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+  background-color: #fafafa;
+  color: var(--gray-color);
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 3rem;
@@ -427,6 +585,18 @@
 
   .betterExperienceSection .text2 {
     width: 447px;
+  }
+
+  .footerTop .footerTopContent {
+    flex-direction: row;
+  }
+
+  .footerTopBorder {
+    display: block;
+  }
+
+  .footerBottom {
+    text-align: left;
   }
 }
 
