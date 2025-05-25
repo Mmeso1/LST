@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useGetProductsQuery } from "../services/productsApi";
-import { increaseLimit, setProducts } from "../slices/productsSlice";
+import { setProducts } from "../slices/productsSlice";
 import type { RootState } from "../store";
 import type { Product } from "../types";
-import ProductCard from "./ProductCard";
 // import app_styles from "../App.module.css";
 import styles from "./styles/ProductSection.module.css";
 
@@ -25,23 +24,40 @@ const ProductsList = () => {
     }
   }, [data]);
 
-  const handleLoadMore = () => {
-    dispatch(increaseLimit());
-  };
-
   return (
     <>
       <div className={styles.productsSectionGrid}>
-        {items.map((product) => (
-          <ProductCard product={product} />
+        {items.map((product, idx) => (
+          <ProductCard key={idx} product={product} />
         ))}
-        {/* <ProductCard /> */}
       </div>
-      {/* <button className={styles.viewAllButton} onClick={handleLoadMore}>
-        Load More Products
-      </button> */}
     </>
   );
 };
 
 export default ProductsList;
+
+interface ProductCardProps {
+  product: Product;
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  const discountPrice = (
+    product.price -
+    (product.price * product.discountPercentage) / 100
+  ).toFixed(2);
+
+  return (
+    <div className={styles.productCard}>
+      <img src={product.thumbnail} alt="product placeholder" />
+      <div className={styles.productCardContent}>
+        <h3>{product.title}</h3>
+        <p>{product.description}</p>
+        <div className={styles.productPrice}>
+          <p>${product.price}</p>
+          <p>${discountPrice}</p>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -4,7 +4,6 @@ import ProductsList from "./components/ProductsList";
 import app_styles from "./App.module.css";
 import Navigation from "./components/Navigation";
 import MasonryLayout from "./components/MasonryLayout";
-import ProductCard from "./components/ProductCard";
 import clock from "./assets/clock.svg";
 import picture from "./assets/picture.svg";
 import arrow from "./assets/arrow-next.svg";
@@ -13,8 +12,16 @@ import stars from "./assets/stars.svg";
 import fb from "./assets/b-facebook.svg";
 import insta from "./assets/b-instagram.svg";
 import twitter from "./assets/b-twitter.svg";
+import { useDispatch } from "react-redux";
+import { increaseLimit } from "./slices/productsSlice";
 
 function App() {
+  const dispatch = useDispatch();
+
+  const handleLoadMore = () => {
+    dispatch(increaseLimit());
+  };
+
   return (
     <>
       <Navigation />
@@ -30,7 +37,9 @@ function App() {
           <div className={styles.productsSectionGrid}>
             <ProductsList />
           </div>
-          <button className={styles.viewAllButton}>Load More Products</button>
+          <button className={styles.viewAllButton} onClick={handleLoadMore}>
+            Load More Products
+          </button>
         </section>
 
         {/* Featured Products */}
