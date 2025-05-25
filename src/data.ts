@@ -8,6 +8,15 @@ import growth from "./assets/growth.svg";
 import post1 from "./assets/postImg_1.svg";
 import post2 from "./assets/postImg_2.svg";
 import post3 from "./assets/postImg_3.svg";
+import img1 from "./assets/image1.svg";
+import img2 from "./assets/image2.svg";
+import img3 from "./assets/image3.svg";
+import img4 from "./assets/image4.svg";
+import img5 from "./assets/image5.svg";
+import img6 from "./assets/image6.svg";
+import img7 from "./assets/image7.svg";
+import img8 from "./assets/image8.svg";
+import img9 from "./assets/image9.svg";
 
 export const items = [
   {
@@ -71,4 +80,16 @@ export const posts = [
     id: 3,
     image: post3,
   },
+];
+
+export const galleryImages = [
+  { id: 1, src: img1, alt: "Image 1" },
+  { id: 2, src: img2, alt: "Image 2" },
+  { id: 3, src: img3, alt: "Image 3" },
+  { id: 4, src: img4, alt: "Image 4" },
+  { id: 5, src: img5, alt: "Image 5" },
+  { id: 6, src: img6, alt: "Image 6" },
+  { id: 7, src: img7, alt: "Image 7" },
+  { id: 8, src: img8, alt: "Image 8" },
+  { id: 9, src: img9, alt: "Image 9" },
 ];

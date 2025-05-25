@@ -1,3 +1,6 @@
+/* ===============================================
+   Variables
+   =============================================== */
 :root {
   --gray-color: #737373;
   --blue-color: #23a6f0;
@@ -9,6 +12,7 @@
   --fsz-12: 12px;
   --fsz-14: 14px;
   --fsz-20: 20px;
+  --fsz-24: 24px;
   --fsz-40: 40px;
   --lh-20: 20px;
   --lh-24: 24px;
@@ -16,14 +20,27 @@
   --lh-50: 50px;
 }
 
-/* Featured section */
+/* ===============================================
+     Utility Container
+     =============================================== */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* 24px side padding */
+  box-sizing: border-box;
+}
+
+/* ===============================================
+     Featured Products & Posts (Mobile First)
+     =============================================== */
 .featuredProductsSection,
 .featuredPostsSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10rem 0rem 0rem;
+  padding: 10rem 0 0;
 }
 
 .featuredProductsSectionHeader,
@@ -32,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0rem 4.5rem 4rem 4.5rem;
+  margin: 0 1.5rem 4rem; /* use container for bigger paddings */
 }
 
 .featuredProductsSectionHeader h2 {
@@ -57,21 +74,36 @@
   letter-spacing: 0.2px;
 }
 
-.featuredProductsSectionGrid {
-  max-width: 1100px;
-  margin: 0 2rem;
-  padding: 0 2rem;
+.featuredProductsSectionGrid,
+.featuredPostsSectionGrid {
+  display: grid;
+  gap: 1.5rem;
   width: 100%;
-  text-align: center;
 }
 
+/* Posts header toggle */
+.featuredPostsSectionHeader h2:nth-of-type(1) {
+  display: none;
+}
+
+.featuredPostsSectionHeader h2:nth-of-type(2) {
+  display: block;
+}
+
+.featuredPostsSectionHeader p {
+  color: var(--blue-color);
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+}
+
+/* Product cards */
 .featuredProductCard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  color: var(--primary-text-color);
   margin-bottom: 4rem;
 }
 
@@ -81,49 +113,12 @@
 }
 
 .featuredProductCard p {
-  flex-wrap: wrap;
-  padding: 0rem 6rem;
-}
-
-/* Featured Posts */
-.featuredPostsSection {
-  margin-top: 5rem;
-  padding: 0rem;
-}
-
-.featuredPostsSectionGrid {
-  display: grid;
-  gap: 2.5rem;
-  margin: 0 2rem;
-  padding: 0 2rem;
-  max-width: 1100px;
+  width: 75%;
+  padding: 0;
   margin: 0 auto;
 }
 
-.featuredPostsSectionHeader p {
-  color: var(--blue-color);
-  font-weight: 700;
-  font-size: var(--fsz-14);
-  line-height: var(--lh-24);
-  letter-spacing: 0.2px;
-}
-
-.featuredPostsSectionHeader h2:nth-of-type(1) {
-  display: none;
-}
-
-.featuredPostsSectionHeader h2:nth-of-type(2) {
-  display: block;
-}
-
-.featuredPostsSectionHeader h2 {
-  font-weight: 700;
-  font-size: var(--fsz-40);
-  line-height: var(--lh-50);
-  letter-spacing: 0.2px;
-  margin-top: -0.5rem;
-}
-
+/* Post cards */
 .postCard {
   box-shadow: 0px 2px 4px 0px #0000001a;
   width: 100%;
@@ -144,23 +139,25 @@
   top: 20px;
   left: 20px;
   background-color: var(--danger-color);
-  padding: 0px 10px;
+  padding: 0 10px;
   border-radius: 3px;
   box-shadow: 0px 2px 4px 0px #0000001a;
-
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--fsz-14);
   font-weight: var(--fw-700);
   line-height: var(--lh-24);
-  color: white;
+  color: #fff;
 }
 
 .postCardBottom {
-  height: 306px;
+  min-height: 306px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
-  padding: 25px 25px 35px 25px;
   font-weight: var(--fw-400);
 }
 
@@ -173,7 +170,7 @@
   line-height: var(--lh-24);
   letter-spacing: 0.2px;
   color: var(--gray-color);
-  width: 280px;
+  max-width: 280px;
 }
 
 .postCardStatus {
@@ -217,27 +214,155 @@
   height: 16px;
 }
 
+/* ===============================================
+     About Us (Mobile First)
+     =============================================== */
+.aboutUsSection {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 5rem 1.5rem;
+  margin: 5rem auto;
+}
+
+.aboutUsInner {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.aboutUsLeft {
+  flex: 1 1 300px;
+  max-width: 438px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.aboutUsLeft h3 {
+  font-size: var(--fsz-24);
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile .stars {
+  width: 130px;
+  height: 22px;
+}
+
+.aboutUsText {
+  color: var(--gray-color);
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileInfo p:first-child {
+  color: var(--blue-color);
+  margin-bottom: -0.5rem;
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+}
+
+.profileInfo p:last-child {
+  color: var(--primary-text-color);
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+}
+
+.galleryGrid {
+  flex: 1 1 300px;
+  max-width: 464px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  min-height: 334px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.galleryImage {
+  width: 112px;
+  height: 112px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 @media (min-width: 768px) {
-  .featuredProductsSection {
-    padding: 0rem;
-    margin: 7rem 0rem;
+  .container {
+    padding: 0 3rem;
   }
 
-  .featuredProductsSectionGrid {
-    display: grid;
+  .featuredProductsSection,
+  .featuredPostsSection {
+    padding: 0;
+    margin: 7rem 0;
+  }
+
+  .featuredProductsSectionGrid,
+  .featuredPostsSectionGrid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .featuredProductCard p {
-    width: 75%;
   }
 
   .featuredPostsSectionHeader h2:nth-of-type(1) {
     display: block;
   }
-
   .featuredPostsSectionHeader h2:nth-of-type(2) {
     display: none;
+  }
+
+  .aboutUsSection {
+    padding: 0;
+    margin: 10rem auto;
+    background-color: #fff;
+  }
+
+  .aboutUsInner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .aboutUsLeft {
+    flex: 0 0 438px;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .galleryGrid {
+    gap: 20px;
+    height: 426px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .galleryImage {
+    width: 142.77px;
+    height: 142.77px;
+    aspect-ratio: 1;
+    object-fit: cover;
   }
 }
