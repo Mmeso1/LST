@@ -338,20 +338,35 @@
     margin: 10rem auto;
     background-color: #fff;
   }
+}
 
-  .aboutUsInner {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
+@media (min-width: 768px) and (max-width: 1024px) {
+  .galleryGrid {
+    gap: 15px;
+    overflow: visible;
+  }
+
+  .galleryImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: unset;
   }
 
   .aboutUsLeft {
-    flex: 0 0 438px;
-    padding: 0;
-    background-color: #fff;
+    flex: 1 1 300px;
+    max-width: 438px;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 
+  .aboutUsInner {
+    flex-direction: column;
+    align-items: center;
+    gap: 3.5rem;
+  }
+}
+
+@media (min-width: 1025px) {
   .galleryGrid {
     gap: 20px;
     height: 426px;
@@ -364,5 +379,18 @@
     height: 142.77px;
     aspect-ratio: 1;
     object-fit: cover;
+  }
+
+  .aboutUsLeft {
+    flex: 0 0 438px;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .aboutUsInner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
   }
 }
