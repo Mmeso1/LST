@@ -328,9 +328,9 @@
   text-align: center;
   padding: 8rem 1.5rem;
   margin: 5rem auto;
-  background-image: url("./assets/bg-subscribe.svg");
+  background-image: url("./assets/bg-sub2.svg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -350,6 +350,7 @@
   line-height: var(--lh-24);
   letter-spacing: 0.2px;
   color: var(--blue-color);
+  width: 358px;
 }
 
 .betterExperienceSection h2 {
@@ -365,7 +366,7 @@
   font-size: var(--fsz-14);
   line-height: var(--lh-20);
   letter-spacing: 0.2px;
-  width: 447px;
+  width: 287px;
 }
 
 .betterExperienceSection .price {
@@ -417,6 +418,15 @@
   .betterExperienceSection {
     height: auto;
     background-position: center center;
+    background-image: url("./assets/bg-subscribe.svg");
+  }
+
+  .betterExperienceSection .text1 {
+    width: 571px;
+  }
+
+  .betterExperienceSection .text2 {
+    width: 447px;
   }
 }
 
