@@ -228,7 +228,7 @@
   flex-direction: column;
   gap: 3.5rem;
   padding: 5rem 1.5rem;
-  margin: 5rem auto;
+  margin: 5rem auto 0rem;
 }
 
 .aboutUsInner {
@@ -330,7 +330,7 @@
   justify-content: center;
   text-align: center;
   padding: 8rem 1.5rem;
-  margin: 5rem auto 0rem;
+  margin: 0rem auto;
   background-image: url("./assets/bg-sub2.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -411,7 +411,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   padding: 2rem 0;
 }
 
@@ -544,6 +544,11 @@
   letter-spacing: 0.2px;
 }
 
+.footerBottom .footerContainer {
+  width: 285px;
+  /* padding: 0 25px; */
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 3rem;
@@ -589,6 +594,7 @@
 
   .footerTop .footerTopContent {
     flex-direction: row;
+    align-items: center;
   }
 
   .footerTopBorder {
@@ -597,6 +603,11 @@
 
   .footerBottom {
     text-align: left;
+  }
+
+  .footerBottom .footerContainer {
+    width: 100%;
+    /* padding: 0 25px; */
   }
 }
 
