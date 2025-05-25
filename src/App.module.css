@@ -5,6 +5,7 @@
   --gray-color: #737373;
   --blue-color: #23a6f0;
   --primary-text-color: #252b42;
+  --secondary-text-color: #23856d;
   --danger-color: #e74040;
   --disabled-element-color: #8ec2f2;
   --fw-400: 400;
@@ -15,6 +16,7 @@
   --fsz-24: 24px;
   --fsz-40: 40px;
   --lh-20: 20px;
+  --lh-22: 22px;
   --lh-24: 24px;
   --lh-30: 30px;
   --lh-50: 50px;
@@ -310,6 +312,79 @@
   object-fit: cover;
 }
 
+/* Better Experience */
+.betterExperienceSection p,
+.betterExperienceSection h2,
+.betterExperienceSection h3,
+.betterExperienceSection button {
+  margin: 0;
+}
+
+.betterExperienceSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem;
+  margin: 5rem auto;
+  background-image: url("./assets/bg-subscribe.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+.betterExperienceSection .contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 38px;
+  max-width: 607px;
+}
+
+.betterExperienceSection .text1 {
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-24);
+  letter-spacing: 0.2px;
+  color: var(--blue-color);
+}
+
+.betterExperienceSection h2 {
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-40);
+  line-height: var(--lh-50);
+  letter-spacing: 0.2px;
+}
+
+.betterExperienceSection .text2 {
+  color: var(--gray-color);
+  font-weight: var(--fw-400);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-20);
+  letter-spacing: 0.2px;
+  width: 447px;
+}
+
+.betterExperienceSection .price {
+  color: var(--secondary-text-color);
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-24);
+}
+
+.betterExperienceSection button {
+  color: #fff;
+  background-color: var(--blue-color);
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: var(--fw-700);
+  font-size: var(--fsz-14);
+  line-height: var(--lh-22);
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0 3rem;
@@ -337,6 +412,11 @@
     padding: 0;
     margin: 10rem auto;
     background-color: #fff;
+  }
+
+  .betterExperienceSection {
+    height: auto;
+    background-position: center center;
   }
 }
 

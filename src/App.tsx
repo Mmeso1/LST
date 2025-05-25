@@ -141,6 +141,20 @@ function App() {
             </div>
           </div>
         </section>
+
+        {/* Better Experience */}
+        <section className={app_styles.betterExperienceSection}>
+          <div className={app_styles.contentContainer}>
+            <p className={app_styles.text1}>Designing Better Experience</p>
+            <h2>Problems trying to resolve the conflict between </h2>
+            <p className={app_styles.text2}>
+              Problems trying to resolve the conflict between the two major
+              realms of Classical physics:
+            </p>
+            <h3 className={app_styles.price}>$16.48</h3>
+            <button>ADD YOUR CALL TO ACTION</button>
+          </div>
+        </section>
       </main>
     </>
   );
