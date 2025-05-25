@@ -1,5 +1,6 @@
 import styles from "./components/styles/ProductSection.module.css";
 import { items, services, posts, galleryImages } from "./data";
+import ProductsList from "./components/ProductsList";
 import app_styles from "./App.module.css";
 import Navigation from "./components/Navigation";
 import MasonryLayout from "./components/MasonryLayout";
@@ -27,16 +28,7 @@ function App() {
             <p>Problems trying to resolve the conflict between</p>
           </div>
           <div className={styles.productsSectionGrid}>
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            <ProductsList />
           </div>
           <button className={styles.viewAllButton}>Load More Products</button>
         </section>
