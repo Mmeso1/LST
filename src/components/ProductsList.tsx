@@ -4,7 +4,6 @@ import { useGetProductsQuery } from "../services/productsApi";
 import { setProducts } from "../slices/productsSlice";
 import type { RootState } from "../store";
 import type { Product } from "../types";
-// import app_styles from "../App.module.css";
 import styles from "./styles/ProductSection.module.css";
 
 const ProductsList = () => {

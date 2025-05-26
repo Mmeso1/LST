@@ -1,4 +1,3 @@
-// store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import productsReducer from "./slices/productsSlice";
 import { productsApi } from "./services/productsApi";
@@ -23,7 +22,6 @@ export const store = configureStore({
     ),
 });
 
-// ✅ Add these typings:
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
